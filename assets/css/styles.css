@@ -26,6 +26,40 @@ body {
     --color-black: hsl(0, 0%, 7%);
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.testimonial {
+    height: max-content;
+    border-radius: 5px
+}
+
+.testimonial-1{
+    flex-basis: 30rem;
+    background-color: var(--color-primary);
+}
+.testimonial-2{
+    flex-basis: 15rem;
+    background-color: var(--color-grey-medium);
+}
+.testimonial-3{
+    flex-basis: 15rem;
+    background-color: var(--color-white);
+}
+.testimonial-4{
+    flex-basis: 30rem;
+    background-color: var(--color-blue-dark);
+}
+.testimonial-5{
+    flex-basis: 10rem;
+    background-color: var(--color-white);
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
