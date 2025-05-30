@@ -32,16 +32,16 @@ body {
 
 main {
     display: grid;
-    /* grid-template-columns: repeat(4, 1fr); */
-    /* grid-template-rows: repeat(2, auto); */
-    gap: 20px;
-    max-width: 1400px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1250px;
 }
 
 .testimonial-card {
+    width: 100%;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 15px 15px 20px rgba(122, 122, 122, 0.563);
 }
 
 .profile {
@@ -118,7 +118,6 @@ main {
 }
 
 .testimonial-1 {
-    width: 630px;
     grid-column: 1 / span 2;
     grid-row: 1;
     color: var(--color-white);
@@ -130,7 +129,6 @@ main {
 }
 
 .testimonial-2 {
-    width: 280px;
     grid-column: 3 / span 1;
     grid-row: 1;
     color: var(--color-white);
@@ -142,7 +140,6 @@ main {
 }
 
 .testimonial-3 {
-    width: 280px;
     color: var(--color-grey-dark);
     grid-column: 1 / span 1;
     grid-row: 2;
@@ -153,7 +150,6 @@ main {
 }
 
 .testimonial-4 {
-    width: 630px;
     grid-column: 2 / span 2;
     grid-row: 2;
     color: var(--color-white);
@@ -165,7 +161,6 @@ main {
 }
 
 .testimonial-5 {
-    width: 280px;
     background-color: hsl(0, 0%, 100%);
     color: hsl(217, 19%, 35%);
     grid-column: 4 / span 1;
@@ -184,4 +179,56 @@ main {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "t1 t1 t2"
+            "t3 t4 t4"
+            "t5 t5 t5";
+    }
+
+    .testimonial-1 {
+        grid-area: t1;
+    }
+
+    .testimonial-2 {
+        grid-area: t2;
+    }
+
+    .testimonial-3 {
+        grid-area: t3;
+    }
+
+    .testimonial-4 {
+        grid-area: t4;
+    }
+
+    .testimonial-5 {
+        grid-area: t5;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "t1 t1"
+            "t2 t5"
+            "t3 t4";
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "t1"
+            "t2"
+            "t3"
+            "t4"
+            "t5";
+    }
 }
